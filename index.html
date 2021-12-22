@@ -3,6 +3,11 @@
         <link rel="stylesheet" href="style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Dia de Quem?</title>
+        <script language=javascript type="text/javascript">
+            dayName = new Array ("domingo", "segunda", "terça", "quarta", "quinta", "sexta", "sábado")
+            monName = new Array ("janeiro", "fevereiro", "março", "abril", "maio", "junho", "agosto", "outubro", "novembro", "dezembro")
+            now = new Date
+        </script>
     </head>
     <body>
         <div id="particles-js"></div>
@@ -12,7 +17,32 @@
                 <a id="home">Dia de Quem?</a>
                 <div class="space"></div>
             </div>
-            <div id="html" class="content"></div>
+            <div id="html" class="content">
+                <h1>Quem é hoje?</h1>
+                <h2 id="data"></h2>
+                <h2 id="quem"></h2>
+
+                <script language=javascript type="text/javascript">
+                    dayName = new Array ("domingo", "segunda-feira", "terça-feira", "quarta-feira", "quinta-feira", "sexta-feira", "sábado")
+                    monName = new Array ("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro")
+                    now = new Date()
+                    document.getElementById("data").innerText = "Hoje é " + dayName[now.getDay() ] + ", " + now.getDate () + " de " + monName[now.getMonth() ]   +  " de "  +     now.getFullYear () + "."; 
+                    if (now.getDay() == 1 || now.getDay() == 3 || now.getDay() == 5) {
+                        document.getElementById("quem").innerText = "Quem toma banho primeiro hoje é Luana.";
+                    }
+                    else if(now.getDay() == 2 || now.getDay() == 4 || now.getDay() == 6) {
+                        document.getElementById("quem").innerHTML = "Quem toma banho primeiro hoje é Manuela."; 
+                    }
+                    else {
+                        if (Math.floor(Math.random() * 2) == 0) {
+                            document.getElementById("quem").innerHTML = "Quem toma banho primeiro hoje é Luana.";
+                        }
+                        else {
+                            document.getElementById("quem").innerHTML = "Quem toma banho primeiro hoje é Manuela.";
+                        }
+                    }
+                </script>
+            </div>
             <a id="top">
                 <svg width="20px" height="20px" viewBox="0 0 444.819 444.819">
                     <path d="M433.968,278.657L248.387,92.79c-7.419-7.044-16.08-10.566-25.977-10.566c-10.088,0-18.652,3.521-25.697,10.566
@@ -42,7 +72,7 @@
 
         //Load first page
         var content = document.getElementById("html")
-        fetch("content-home.html").then(response => response.text()).then(text => content.innerHTML = text)
+        // fetch("content-home.html").then(response => response.text()).then(text => content.innerHTML = text)
         homeBtn.classList.add("active")
 
         //Home Button
