@@ -1,23 +1,23 @@
 <h1>Quem é hoje?</h1>
-
+<p id="data"></p>
+<p id="demo"></p>
 <script language=javascript type="text/javascript">
     dayName = new Array ("domingo", "segunda-feira", "terça-feira", "quarta-feira", "quinta-feira", "sexta-feira", "sábado")
     monName = new Array ("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro")
     now = new Date()
-   document.body.innerHTML += "Hoje é " + dayName[now.getDay() ] + ", " + now.getDate () + " de " + monName[now.getMonth() ]   +  " de "  +     now.getFullYear () + ".\n";
+    document.getElementById("data").innerText = "Hoje é " + dayName[now.getDay() ] + ", " + now.getDate () + " de " + monName[now.getMonth() ]   +  " de "  +     now.getFullYear () + ".";
     if (now.getDay() == 1 || now.getDay() == 3 || now.getDay() == 5) {
-        document.body.innerHTML += "Quem toma primeiro hoje é Luana.\n";
+        document.getElementById("quem").innerText = "Quem toma primeiro hoje é Luana.";
     }
     else if(now.getDay() == 2 || now.getDay() == 4 || now.getDay() == 6) {
-        
-       document.body.innerHTML += "Quem toma primeiro hoje é Manuela.\n";
+        document.getElementById("quem").innerText = "Quem toma primeiro hoje é Manuela.";
     }
     else {
         if (Math.floor(Math.random() * 2) == 0) {
-            document.body.innerHTML += "Quem toma primeiro hoje é Luana.\n";
+            document.getElementById("quem").innerText = "Quem toma primeiro hoje é Luana.";
         }
         else {
-            document.body.innerHTML += "Quem toma primeiro hoje é Manuela.\n";
+            document.getElementById("quem").innerText = "Quem toma primeiro hoje é Manuela.";
         }
     }
 </script>
