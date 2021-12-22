@@ -8,17 +8,17 @@
     now = new Date()
     document.getElementById("data").innerText = "Hoje é " + dayName[now.getDay() ] + ", " + now.getDate () + " de " + monName[now.getMonth() ]   +  " de "  +     now.getFullYear () + "."; 
     if (now.getDay() == 1 || now.getDay() == 3 || now.getDay() == 5) {
-        document.getElementById("quem").innerText = "Quem toma primeiro hoje é Luana.";
+        document.getElementById("quem").innerText = "Quem toma banho primeiro hoje é Luana.";
     }
     else if(now.getDay() == 2 || now.getDay() == 4 || now.getDay() == 6) {
-        document.getElementById("quem").innerHTML = "Quem toma primeiro hoje é Manuela."; 
+        document.getElementById("quem").innerHTML = "Quem toma banho primeiro hoje é Manuela."; 
     }
     else {
         if (Math.floor(Math.random() * 2) == 0) {
-            document.getElementById("quem").innerHTML = "Quem toma primeiro hoje é Luana.";
+            document.getElementById("quem").innerHTML = "Quem toma banho primeiro hoje é Luana.";
         }
         else {
-            document.getElementById("quem").innerHTML = "Quem toma primeiro hoje é Manuela.";
+            document.getElementById("quem").innerHTML = "Quem toma banho primeiro hoje é Manuela.";
         }
     }
 </script>
