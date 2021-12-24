@@ -122,7 +122,7 @@ div#particles-js {
 .content {
     flex-grow: 0;
     color: white;
-    margin-top: 70vh; /* Natal - 1vh */
+    margin-top: 120vh; /* Natal - 1vh */
     margin-bottom: 1vh;
     margin-left: 10vw;
     margin-right: 10vw;
@@ -254,7 +254,7 @@ table, td, th {
     height: 340px;
     background: #a0d5d3;
     position: absolute;
-    top: 43%;
+    top: 73%;
     left: 50%;
     border-radius: 50%;
     margin-top: -60px;
@@ -499,7 +499,7 @@ table, td, th {
   .message {
     position: absolute;
     left: 50%;
-    top: 41%;
+    top: 70%;
     margin-top: 80px;
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
