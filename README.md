@@ -2,7 +2,7 @@
 
 Bem-vindo ao "Dia de Quem", o projeto mais emocionante das suas férias! Se você já se perguntou qual das suas duas irmãs, Luana ou Manuela, vai tomar banho primeiro, então este é o lugar certo para você!
 
-![Imagem do Site](https://caionms.github.io/diadequem/assets/images/page.png)
+<img src="/assets/images/page.png">
 
 ## Acesse o Site
 
